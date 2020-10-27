@@ -1,0 +1,3951 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Build-A-Kitty</title>
+        
+        <link href="css/styles.css" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Kristi|Poiret+One&display=swap" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+        
+        <div class="header">
+            
+            <p>Kat Willard's</p>
+            <h1>Build - A - Kitty</h1>
+                        
+        </div>
+        
+        <div class="row">
+            
+            <div class="side">
+                
+                <div id="leftbuttons">
+                    
+                    <button onclick="leftColourChange()">&larr;</button>
+                    <br>
+                    <button onclick="leftEarChange()">&larr;</button>
+                    <br>
+                    <button onclick="leftEyeChange()">&larr;</button>
+                    <br>
+                    <button onclick="leftTailChange()">&larr;</button>
+                    <br>
+                    <button onclick="leftItemChange()">&larr;</button> 
+                    <br>
+                    <button onclick="leftBGchange()">&larr;</button> 
+
+                    
+                </div>
+                
+                <div id="buttonwords">
+                
+                    fur
+                    <br>
+                    ears
+                    <br>
+                    eyes
+                    <br>
+                    tails
+                    <br>
+                    accessories
+                    <br>
+                    backgrounds
+                    
+                </div>
+                
+                <div id="rightbuttons">
+                
+                    <button onclick="changeColour()">&rarr;</button>
+                    <br>
+                    <button onclick="changeEars()">&rarr;</button>
+                    <br>
+                    <button onclick="changeEyes()">&rarr;</button>                
+                    <br>
+                    <button onclick="changeTail()">&rarr;</button>
+                    <br>
+                    <button onclick="changeItem()">&rarr;</button>
+                    <br>
+                    <button onclick="changeBG()">&rarr;</button>
+                
+                </div>
+
+            
+            </div>
+            
+            <div class="main">
+                
+                <div id="images">
+            
+                    <img id="furColour" src="images/mainBod.png">
+                    <img id="ears" src="images/mainEars.png">
+                    <img id="eyes" src="images/normalBlue.png">
+                    <img id="tailShapes" src="images/mainTail.png">
+                    <img id="item" src="images/noBG.png"> 
+                    <img id="bgs" src="images/noBG.png">
+                    
+                </div>
+                
+            </div>
+        
+        </div>
+        
+        
+        
+        <div class="footer">
+        
+            <h2> &copy; Copyright Kat Willard 
+            
+                <script type="text/javascript">
+
+                    document.write(new Date().getFullYear());
+
+                </script>
+                
+            </h2>
+        
+        </div>
+        
+        
+        <!-- JAVASCRIPT!!! -->
+        
+        <script>
+            
+            
+            /* ********** RIGHT BUTTONS ********** */
+            
+            
+
+
+            
+            /* ***** FUR COLOUR AND TYPE CHANGES ***** */
+            
+            
+        
+            var colourClick = 0;
+            
+            function changeColour(){
+                
+                if(colourClick==0){
+
+                    document.getElementById("furColour").src="images/greyBod.png";
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/tailUpGrey.png";
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/bobbedGrey.png";
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/downGrey.png";
+
+                    }
+
+                    if(earClick==0){
+
+                        document.getElementById("ears").src="images/normalBothGrey.png";
+
+                    } else if(earClick==1){
+
+                        document.getElementById("ears").src="images/normalRightGrey.png";
+
+                    } else if(earClick==2){
+
+                        document.getElementById("ears").src="images/normalLeftGrey.png";
+
+                    } else if(earClick==3){
+
+                        document.getElementById("ears").src="images/curledBothGrey.png";
+
+                    } else if(earClick==4){
+
+                        document.getElementById("ears").src="images/curledRightGrey.png";
+
+                    } else if(earClick==5){
+
+                        document.getElementById("ears").src="images/curledLeftGrey.png";
+
+                    } else if(earClick==6){
+
+                        document.getElementById("ears").src="images/foldedBothGrey.png";
+
+                    } else if(earClick==7){
+
+                        document.getElementById("ears").src="images/foldedRightGrey.png";
+
+                    } else if(earClick==8){
+
+                        document.getElementById("ears").src="images/foldedLeftGrey.png";
+
+                    } 
+
+                    colourClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("furColour").src="images/blackBod.png";
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/tailUpBlack.png";
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/bobbedBlack.png";
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/downBlack.png";
+
+                    }
+
+                    if(earClick==0){
+
+                        document.getElementById("ears").src="images/normalBothBlack.png";
+
+                    } else if(earClick==1){
+
+                        document.getElementById("ears").src="images/normalRightBlack.png";
+
+                    } else if(earClick==2){
+
+                        document.getElementById("ears").src="images/normalLeftBlack.png";
+
+                    } else if(earClick==3){
+
+                        document.getElementById("ears").src="images/curledBothBlack.png";
+
+                    } else if(earClick==4){
+
+                        document.getElementById("ears").src="images/curledRightBlack.png";
+
+                    } else if(earClick==5){
+
+                        document.getElementById("ears").src="images/curledLeftBlack.png";
+
+                    } else if(earClick==6){
+
+                        document.getElementById("ears").src="images/foldedBothBlack.png";
+
+                    } else if(earClick==7){
+
+                        document.getElementById("ears").src="images/foldedRightBlack.png";
+
+                    } else if(earClick==8){
+
+                        document.getElementById("ears").src="images/foldedLeftBlack.png";
+
+                    } 
+
+                    colourClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("furColour").src="images/tanBod.png";
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/tailUpTan.png";
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/bobbedTan.png";
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/downTan.png";
+
+                    }
+
+                    if(earClick==0){
+
+                        document.getElementById("ears").src="images/normalBothTan.png";
+
+                    } else if(earClick==1){
+
+                        document.getElementById("ears").src="images/normalRightTan.png";
+
+                    } else if(earClick==2){
+
+                        document.getElementById("ears").src="images/normalLeftTan.png";
+
+                    } else if(earClick==3){
+
+                        document.getElementById("ears").src="images/curledBothTan.png";
+
+                    } else if(earClick==4){
+
+                        document.getElementById("ears").src="images/curledRightTan.png";
+
+                    } else if(earClick==5){
+
+                        document.getElementById("ears").src="images/curledLeftTan.png";
+
+                    } else if(earClick==6){
+
+                        document.getElementById("ears").src="images/foldedBothTan.png";
+
+                    } else if(earClick==7){
+
+                        document.getElementById("ears").src="images/foldedRightTan.png";
+
+                    } else if(earClick==8){
+
+                        document.getElementById("ears").src="images/foldedLeftTan.png";
+
+                    } 
+
+                    colourClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("furColour").src="images/orangeBod.png";
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/tailUpOrange.png";
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/bobbedOrange.png";
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/downOrange.png";
+
+                    }
+
+                    if(earClick==0){
+
+                        document.getElementById("ears").src="images/normalBothOrange.png";
+
+                    } else if(earClick==1){
+
+                        document.getElementById("ears").src="images/normalRightOrange.png";
+
+                    } else if(earClick==2){
+
+                        document.getElementById("ears").src="images/normalLeftOrange.png";
+
+                    } else if(earClick==3){
+
+                        document.getElementById("ears").src="images/curledBothOrange.png";
+
+                    } else if(earClick==4){
+
+                        document.getElementById("ears").src="images/curledRightOrange.png";
+
+                    } else if(earClick==5){
+
+                        document.getElementById("ears").src="images/curledLeftOrange.png";
+
+                    } else if(earClick==6){
+
+                        document.getElementById("ears").src="images/foldedBothOrange.png";
+
+                    } else if(earClick==7){
+
+                        document.getElementById("ears").src="images/foldedRightOrange.png";
+
+                    } else if(earClick==8){
+
+                        document.getElementById("ears").src="images/foldedLeftOrange.png";
+
+                    } 
+
+                    colourClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("furColour").src="images/brownBod.png";
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/tailUpBrown.png";
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/bobbedBrown.png";
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/downBrown.png";
+
+                    }
+
+                    if(earClick==0){
+
+                        document.getElementById("ears").src="images/normalBothBrown.png";
+
+                    } else if(earClick==1){
+
+                        document.getElementById("ears").src="images/normalRightBrown.png";
+
+                    } else if(earClick==2){
+
+                        document.getElementById("ears").src="images/normalLeftBrown.png";
+
+                    } else if(earClick==3){
+
+                        document.getElementById("ears").src="images/curledBothBrown.png";
+
+                    } else if(earClick==4){
+
+                        document.getElementById("ears").src="images/curledRightBrown.png";
+
+                    } else if(earClick==5){
+
+                        document.getElementById("ears").src="images/curledLeftBrown.png";
+
+                    } else if(earClick==6){
+
+                        document.getElementById("ears").src="images/foldedBothBrown.png";
+
+                    } else if(earClick==7){
+
+                        document.getElementById("ears").src="images/foldedRightBrown.png";
+
+                    } else if(earClick==8){
+
+                        document.getElementById("ears").src="images/foldedLeftBrown.png";
+
+                    } 
+
+                    colourClick++;
+
+                } else if(colourClick==5){
+
+                        document.getElementById("furColour").src="images/fluffyMain.png";
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffyUp.png";
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyBobbed.png";
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffyDown.png";
+
+                        }
+
+                        if(earClick==0){
+
+                            document.getElementById("ears").src="images/fluffyNormalMain.png";
+
+                        } else if(earClick==1){
+
+                            document.getElementById("ears").src="images/fluffyRightWhite.png";
+
+                        } else if(earClick==2){
+
+                            document.getElementById("ears").src="images/fluffyLeftWhite.png";
+
+                        } else if(earClick==3){
+
+                            document.getElementById("ears").src="images/fluffyCurled.png";
+
+                        } else if(earClick==4){
+
+                            document.getElementById("ears").src="images/fluffyCurledR.png";
+
+                        } else if(earClick==5){
+
+                            document.getElementById("ears").src="images/fluffyCurledL.png";
+
+                        } else if(earClick==6){
+
+                            document.getElementById("ears").src="images/fluffyFolded.png";
+
+                        } else if(earClick==7){
+
+                            document.getElementById("ears").src="images/fluffyFoldedR.png";
+
+                        } else if(earClick==8){
+
+                            document.getElementById("ears").src="images/fluffyFoldedL.png";
+
+                        }
+
+                        colourClick++;
+
+                    } else if(colourClick==6){
+
+                        document.getElementById("furColour").src="images/fluffyGrey.png";
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpGrey.png";
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyBobbedGrey.png";
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffyDownGrey.png";
+
+                        }
+
+                        if(earClick==0){
+
+                            document.getElementById("ears").src="images/fluffyNormalGrey.png";
+
+                        } else if(earClick==1){
+
+                            document.getElementById("ears").src="images/fluffyRightGrey.png";
+
+                        } else if(earClick==2){
+
+                            document.getElementById("ears").src="images/fluffyLeftGrey.png";
+
+                        } else if(earClick==3){
+
+                            document.getElementById("ears").src="images/fluffyCurledGrey.png";
+
+                        } else if(earClick==4){
+
+                            document.getElementById("ears").src="images/fluffyCurledRGrey.png";
+
+                        } else if(earClick==5){
+
+                            document.getElementById("ears").src="images/fluffyCurledLGrey.png";
+
+                        } else if(earClick==6){
+
+                            document.getElementById("ears").src="images/fluffyFoldedGrey.png";
+
+                        } else if(earClick==7){
+
+                            document.getElementById("ears").src="images/fluffyFoldedRGrey.png";
+
+                        } else if(earClick==8){
+
+                            document.getElementById("ears").src="images/fluffyFoldedLGrey.png";
+
+                        } 
+
+                        colourClick++;
+
+                    } else if(colourClick==7){
+
+                        document.getElementById("furColour").src="images/fluffyBlack.png";
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpBlack.png";
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyBobbedBlack.png";
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffyDownBlack.png";
+
+                        }
+
+                        if(earClick==0){
+
+                            document.getElementById("ears").src="images/fluffyNormalBlack.png";
+
+                        } else if(earClick==1){
+
+                            document.getElementById("ears").src="images/fluffyRightBlack.png";
+
+                        } else if(earClick==2){
+
+                            document.getElementById("ears").src="images/fluffyLeftBlack.png";
+
+                        } else if(earClick==3){
+
+                            document.getElementById("ears").src="images/fluffyCurledBlack.png";
+
+                        } else if(earClick==4){
+
+                            document.getElementById("ears").src="images/fluffyCurledRBlack.png";
+
+                        } else if(earClick==5){
+
+                            document.getElementById("ears").src="images/fluffyCurledLBlack.png";
+
+                        } else if(earClick==6){
+
+                            document.getElementById("ears").src="images/fluffyFoldedBlack.png";
+
+                        } else if(earClick==7){
+
+                            document.getElementById("ears").src="images/fluffyFoldedRBlack.png";
+
+                        } else if(earClick==8){
+
+                            document.getElementById("ears").src="images/fluffyFoldedLBlack.png";
+
+                        } 
+
+                        colourClick++;
+
+                    } else if(colourClick==8){
+
+                        document.getElementById("furColour").src="images/fluffyTan.png";
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpTan.png";
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyBobbedTan.png";
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffyDownTan.png";
+
+                        }
+
+                        if(earClick==0){
+
+                            document.getElementById("ears").src="images/fluffyNormalTan.png";
+
+                        } else if(earClick==1){
+
+                            document.getElementById("ears").src="images/fluffyRightTan.png";
+
+                        } else if(earClick==2){
+
+                            document.getElementById("ears").src="images/fluffyLeftTan.png";
+
+                        } else if(earClick==3){
+
+                            document.getElementById("ears").src="images/fluffyCurledTan.png";
+
+                        } else if(earClick==4){
+
+                            document.getElementById("ears").src="images/fluffyCurledRTan.png";
+
+                        } else if(earClick==5){
+
+                            document.getElementById("ears").src="images/fluffyCurledLTan.png";
+
+                        } else if(earClick==6){
+
+                            document.getElementById("ears").src="images/fluffyFoldedTan.png";
+
+                        } else if(earClick==7){
+
+                            document.getElementById("ears").src="images/fluffyFoldedRTan.png";
+
+                        } else if(earClick==8){
+
+                            document.getElementById("ears").src="images/fluffyFoldedLTan.png";
+
+                        } 
+
+                        colourClick++;
+
+                    } else if(colourClick==9){
+
+                        document.getElementById("furColour").src="images/fluffyOrange.png";
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpOrange.png";
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyBobbedOrange.png";
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffyDownOrange.png";
+
+                        }
+
+                        if(earClick==0){
+
+                            document.getElementById("ears").src="images/fluffyNormalOrange.png";
+
+                        } else if(earClick==1){
+
+                            document.getElementById("ears").src="images/fluffyRightOrange.png";
+
+                        } else if(earClick==2){
+
+                            document.getElementById("ears").src="images/fluffyLeftOrange.png";
+
+                        } else if(earClick==3){
+
+                            document.getElementById("ears").src="images/fluffyCurledOrange.png";
+
+                        } else if(earClick==4){
+
+                            document.getElementById("ears").src="images/fluffyCurledROrange.png";
+
+                        } else if(earClick==5){
+
+                            document.getElementById("ears").src="images/fluffyCurledLOrange.png";
+
+                        } else if(earClick==6){
+
+                            document.getElementById("ears").src="images/fluffyFoldedOrange.png";
+
+                        } else if(earClick==7){
+
+                            document.getElementById("ears").src="images/fluffyFoldedROrange.png";
+
+                        } else if(earClick==8){
+
+                            document.getElementById("ears").src="images/fluffyFoldedLOrange.png";
+
+                        } 
+
+                        colourClick++;
+
+                    } else if(colourClick==10){
+
+                         document.getElementById("furColour").src="images/fluffyBrown.png";
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpBrown.png";
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyBobbedBrown.png";
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffyDownBrown.png";
+
+                        }
+
+                        if(earClick==0){
+
+                            document.getElementById("ears").src="images/fluffyNormalBrown.png";
+
+                        } else if(earClick==1){
+
+                            document.getElementById("ears").src="images/fluffyRightBrown.png";
+
+                        } else if(earClick==2){
+
+                            document.getElementById("ears").src="images/fluffyLeftBrown.png";
+
+                        } else if(earClick==3){
+
+                            document.getElementById("ears").src="images/fluffyCurledBrown.png";
+
+                        } else if(earClick==4){
+
+                            document.getElementById("ears").src="images/fluffyCurledRBrown.png";
+
+                        } else if(earClick==5){
+
+                            document.getElementById("ears").src="images/fluffyCurledLBrown.png";
+
+                        } else if(earClick==6){
+
+                            document.getElementById("ears").src="images/fluffyFoldedBrown.png";
+
+                        } else if(earClick==7){
+
+                            document.getElementById("ears").src="images/fluffyFoldedRBrown.png";
+
+                        } else if(earClick==8){
+
+                            document.getElementById("ears").src="images/fluffyFoldedLBrown.png";
+
+                        }
+
+                        colourClick++;
+                        
+                    } else if(colourClick==11){
+
+                    document.getElementById("furColour").src="images/nakedbody.png";
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/nakedTailUp.png";
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/nakedBobbed.png";
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/nakedTailDown.png";
+
+                    }
+
+                    if(earClick==0){
+
+                        document.getElementById("ears").src="images/nakedNormal.png";
+
+                    } else if(earClick==1){
+
+                        document.getElementById("ears").src="images/nakedright.png";
+
+                    } else if(earClick==2){
+
+                        document.getElementById("ears").src="images/nakedleft.png";
+
+                    } else if(earClick==3){
+
+                        document.getElementById("ears").src="images/nakedcurled.png";
+
+                    } else if(earClick==4){
+
+                        document.getElementById("ears").src="images/nakedcurledRight.png";
+
+                    } else if(earClick==5){
+
+                        document.getElementById("ears").src="images/nakedcurledLeft.png";
+
+                    } else if(earClick==6){
+
+                        document.getElementById("ears").src="images/nakedfolded.png";
+
+                    } else if(earClick==7){
+
+                        document.getElementById("ears").src="images/nakedfoldedRight.png";
+
+                    } else if(earClick==8){
+
+                        document.getElementById("ears").src="images/nakedfoldedLeft.png";
+
+                    } 
+                    
+                    colourClick++;
+                    
+                }else if(colourClick==12){
+
+                    document.getElementById("furColour").src="images/mainBod.png";
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/mainTail.png";
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/bobTail.png";
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/downTail.png";
+
+                    }
+
+                    if(earClick==0){
+
+                        document.getElementById("ears").src="images/mainEars.png";
+
+                    } else if(earClick==1){
+
+                        document.getElementById("ears").src="images/normalRight.png";
+
+                    } else if(earClick==2){
+
+                        document.getElementById("ears").src="images/normalLeft.png";
+
+                    } else if(earClick==3){
+
+                        document.getElementById("ears").src="images/curled.png";
+
+                    } else if(earClick==4){
+
+                        document.getElementById("ears").src="images/curledRight.png";
+
+                    } else if(earClick==5){
+
+                        document.getElementById("ears").src="images/curledLeft.png";
+
+                    } else if(earClick==6){
+
+                        document.getElementById("ears").src="images/folded.png";
+
+                    } else if(earClick==7){
+
+                        document.getElementById("ears").src="images/foldedRight.png";
+
+                    } else if(earClick==8){
+
+                        document.getElementById("ears").src="images/foldedLeft.png";
+
+                    } 
+                    
+                    colourClick = 0;
+                    
+                }
+                    
+                
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            /* ***** EAR CHANGES ***** */
+            
+            
+            
+            var earClick = 0;
+
+            function changeEars(){
+
+            if(earClick==0){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/normalRight.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/normalRightGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/normalRightBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/normalRightTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/normalRightOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/normalRightBrown.png";
+                    earClick++;
+
+                } else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffyrightwhite.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffyrightgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffyrightblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffyrighttan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffyrightorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffyrightbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedright.png";
+                    earClick++;
+                }
+
+            } else if(earClick==1){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/normalLeft.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/normalLeftGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/normalLeftBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/normalLeftTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/normalLeftOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/normalLeftBrown.png";
+                    earClick++;
+
+                } else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffyleftwhite.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffyleftgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffyleftblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffylefttan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffyleftorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffyleftbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedleft.png";
+                    earClick++;
+                }
+
+            } else if(earClick==2){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/curled.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/curledBothGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/curledBothBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/curledBothTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/curledBothOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/curledBothBrown.png";
+                    earClick++;
+
+                } else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffycurled.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffycurledgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffycurledblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffycurledtan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffycurledorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffycurledbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedcurled.png";
+                    earClick++;
+                }
+
+            } else if(earClick==3){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/curledRight.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/curledRightGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/curledRightBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/curledRightTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/curledRightOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/curledRightBrown.png";
+                    earClick++;
+
+                } else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffycurledR.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffycurledRgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffycurledRblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffycurledRtan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffycurledRorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffycurledRbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedcurledright.png";
+                    earClick++;
+                }
+
+            } else if(earClick==4){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/curledLeft.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/curledLeftGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/curledLeftBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/curledLeftTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/curledLeftOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/curledLeftBrown.png";
+                    earClick++;
+
+                } else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffycurledL.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffycurledLgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffycurledLblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffycurledLtan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffycurledLorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffycurledLbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedcurledleft.png";
+                    earClick++;
+                }
+
+            } else if(earClick==5){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/folded.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/foldedBothGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/foldedBothBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/foldedBothTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/foldedBothOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/foldedBothBrown.png";
+                    earClick++;
+
+                } else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffyfolded.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffyfoldedgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffyfoldedblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffyfoldedtan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffyfoldedorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffyfoldedbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedfolded.png";
+                    earClick++;
+                }
+
+            } else if(earClick==6){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/foldedRight.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/foldedRightGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/foldedRightBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/foldedRightTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/foldedRightOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/foldedRightBrown.png";
+                    earClick++;
+
+                } else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffyfoldedr.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffyfoldedrgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffyfoldedrblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffyfoldedrtan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffyfoldedrorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffyfoldedrbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedfoldedright.png";
+                    earClick++;
+                }
+
+            } else if(earClick==7){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/foldedLeft.png";
+                    earClick++;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/foldedLeftGrey.png";
+                    earClick++;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/foldedLeftBlack.png";
+                    earClick++;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/foldedLeftTan.png";
+                    earClick++;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/foldedLeftOrange.png";
+                    earClick++;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/foldedLeftBrown.png";
+                    earClick++;
+
+                }  else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffyfoldedl.png";
+                    earClick++;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffyfoldedlgrey.png";
+                    earClick++;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffyfoldedlblack.png";
+                    earClick++;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffyfoldedltan.png";
+                    earClick++;
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffyfoldedlorange.png";
+                    earClick++;
+
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffyfoldedlbrown.png";
+                    earClick++;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedfoldedleft.png";
+                    earClick++;
+                }
+
+            } else if(earClick==8){
+
+                if(colourClick==0){
+
+                    document.getElementById("ears").src="images/mainEars.png";
+                    earClick = 0;
+
+                } else if(colourClick==1){
+
+                    document.getElementById("ears").src="images/normalBothGrey.png";
+                    earClick = 0;
+
+                } else if(colourClick==2){
+
+                    document.getElementById("ears").src="images/normalBothBlack.png";
+                    earClick = 0;
+
+                } else if(colourClick==3){
+
+                    document.getElementById("ears").src="images/normalBothTan.png";
+                    earClick = 0;
+
+                } else if(colourClick==4){
+
+                    document.getElementById("ears").src="images/normalBothOrange.png";
+                    earClick = 0;
+
+                } else if(colourClick==5){
+
+                    document.getElementById("ears").src="images/normalBothBrown.png";
+                    earClick = 0;
+
+                }  else if(colourClick==6){
+
+                    document.getElementById("ears").src="images/fluffynormalmain.png";
+                    earClick = 0;
+
+                } else if(colourClick==7){
+
+                    document.getElementById("ears").src="images/fluffynormalgrey.png";
+                    earClick = 0;
+
+                } else if(colourClick==8){
+
+                    document.getElementById("ears").src="images/fluffynormalblack.png";
+                    earClick = 0;
+
+                } else if(colourClick==9){
+
+                    document.getElementById("ears").src="images/fluffynormaltan.png";
+                    earClick = 0
+
+                } else if(colourClick==10){
+
+                    document.getElementById("ears").src="images/fluffynormalorange.png";
+                    earClick = 0;
+                    
+                } else if(colourClick==11){
+
+                    document.getElementById("ears").src="images/fluffynormalbrown.png";
+                    earClick = 0;
+
+                } else if(colourClick==12){
+
+                    document.getElementById("ears").src="images/nakedcurledright.png";
+                    earClick = 0;
+                }
+
+            }
+
+         }
+
+                         
+            
+            
+            
+            
+            
+                /* ***** EYE CHANGES ***** */
+            
+            
+            
+                var eyeClick = 0;
+            
+                function changeEyes(){
+                    
+                    if(eyeClick==0){
+
+                        document.getElementById("eyes").src="images/normalGreen.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==1){
+
+                        document.getElementById("eyes").src="images/normalYellow.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==2){
+
+                        document.getElementById("eyes").src="images/normalBrown.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==3){
+
+                        document.getElementById("eyes").src="images/excitedBlue.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==4){
+
+                        document.getElementById("eyes").src="images/excitedGreen.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==5){
+
+                        document.getElementById("eyes").src="images/excitedYellow.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==6){
+
+                        document.getElementById("eyes").src="images/excitedBrown.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==7){
+
+                        document.getElementById("eyes").src="images/suspiciousBlue.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==8){
+
+                        document.getElementById("eyes").src="images/suspiciousGreen.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==9){
+
+                        document.getElementById("eyes").src="images/suspiciousYellow.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==10){
+
+                        document.getElementById("eyes").src="images/suspiciousBrown.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==11){
+
+                        document.getElementById("eyes").src="images/happyEyes.png";
+                        eyeClick++;
+
+                    } else if(eyeClick==12){
+
+                        document.getElementById("eyes").src="images/normalBlue.png";
+                        eyeClick = 0;
+
+                    }
+                    
+                }
+            
+            
+            
+            
+            
+            /* ***** TAIL CHANGES ***** */
+            
+            
+            
+            var tailClick = 0;
+            
+            function changeTail(){
+
+                if(colourClick==1){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/bobbedGrey.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/downGrey.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/tailUpGrey.png";
+                        tailClick = 0;
+
+                    }
+
+                } else if(colourClick==2){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/bobbedBlack.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/downBlack.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/tailUpBlack.png";
+                        tailClick = 0;
+
+                    } 
+                } else if(colourClick==3){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/bobbedTan.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/downTan.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/tailUpTan.png";
+                        tailClick = 0;
+
+                    } 
+
+                }else if(colourClick==4){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/bobbedOrange.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/downOrange.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/tailUpOrange.png";
+                        tailClick = 0;
+
+                    } 
+
+                } else if(colourClick==5){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/bobbedBrown.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/downBrown.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/tailUpBrown.png";
+                        tailClick = 0;
+
+                    } 
+                    
+                } else if(colourClick==6){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/fluffybobbed.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/fluffydown.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/fluffyup.png";
+                        tailClick = 0;
+
+                    }
+
+                } else if(colourClick==7){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/fluffybobbedgrey.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/fluffydownGrey.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/fluffyUpGrey.png";
+                        tailClick = 0;
+
+                    }
+
+                } else if(colourClick==8){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/fluffybobbedblack.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/fluffydownblack.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/fluffyUpblack.png";
+                        tailClick = 0;
+
+                    }
+                    
+                } else if(colourClick==9){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/fluffybobbedtan.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/fluffydowntan.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/fluffyUptan.png";
+                        tailClick = 0;
+
+                    }
+                    
+                } else if(colourClick==10){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/fluffybobbedorange.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/fluffydownorange.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/fluffyUporange.png";
+                        tailClick = 0;
+
+                    }
+                    
+                } else if(colourClick==11){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/fluffybobbedbrown.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/fluffydownbrown.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/fluffyupbrown.png";
+                        tailClick = 0;
+
+                    }
+                    
+                } else if(colourClick==12){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/nakedbobbed.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/nakedtaildown.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/nakedtailup.png";
+                        tailClick = 0;
+
+                    }
+                }
+                
+                else if(colourClick==0){
+
+                    if(tailClick==0){
+
+                        document.getElementById("tailShapes").src="images/bobTail.png";
+                        tailClick++;
+
+                    } else if(tailClick==1){
+
+                        document.getElementById("tailShapes").src="images/downTail.png";
+                        tailClick++;
+
+                    } else if(tailClick==2){
+
+                        document.getElementById("tailShapes").src="images/mainTail.png";
+                        tailClick = 0;
+
+                    }
+
+                }
+
+            }
+                
+            
+            
+            
+            var itemClick = 0;
+            
+            function changeItem(){
+                
+                if(itemClick==0){
+                    
+                    document.getElementById("item").src="images/collarred.png";
+                    itemClick++;
+                    
+                } else if(itemClick==1){
+                    
+                    document.getElementById("item").src="images/collarorange.png";
+                    itemClick++;
+                    
+                } else if(itemClick==2){
+                    
+                    document.getElementById("item").src="images/collaryellow.png";
+                    itemClick++;
+                    
+                } else if(itemClick==3){
+                    
+                    document.getElementById("item").src="images/collargreen.png";
+                    itemClick++;
+                    
+                } else if(itemClick==4){
+                    
+                    document.getElementById("item").src="images/collarpurple.png";
+                    itemClick++;
+                    
+                } else if(itemClick==5){
+                    
+                    document.getElementById("item").src="images/collarpink.png";
+                    itemClick++;
+                    
+                } else if(itemClick==6){
+                    
+                    document.getElementById("item").src="images/bandanared.png";
+                    itemClick++;
+                    
+                } else if(itemClick==7){
+                    
+                    document.getElementById("item").src="images/bandanaorange.png";
+                    itemClick++;
+                    
+                } else if(itemClick==8){
+                    
+                    document.getElementById("item").src="images/bandanayellow.png";
+                    itemClick++;
+                    
+                } else if(itemClick==9){
+                    
+                    document.getElementById("item").src="images/bandanagreen.png";
+                    itemClick++;
+                    
+                } else if(itemClick==10){
+                    
+                    document.getElementById("item").src="images/bandanablue.png";
+                    itemClick++;
+                    
+                } else if(itemClick==11){
+                    
+                    document.getElementById("item").src="images/bandanapurple.png";
+                    itemClick++;
+                    
+                } else if(itemClick==12){
+                    
+                    document.getElementById("item").src="images/bandanapink.png";
+                    itemClick++;
+                    
+                } else if(itemClick==13){
+                    
+                    document.getElementById("item").src="images/noBg.png";
+                    itemClick = 0;
+                    
+                }
+            }
+                        
+            
+            
+                 
+            
+            /* ***** BACKGROUND CHANGES ***** */
+            
+            var bgClick = 0;
+
+            function changeBG(){
+
+                if(bgClick==0){
+
+                    document.getElementById("bgs").src="images/redBG.png";
+                    bgClick++;
+
+                } else if(bgClick==1){
+
+                    document.getElementById("bgs").src="images/orangeBG.png";
+                    bgClick++;
+
+                } else if(bgClick==2){
+
+                    document.getElementById("bgs").src="images/yellowBG.png";
+                    bgClick++;
+
+                } else if(bgClick==3){
+
+                    document.getElementById("bgs").src="images/greenBG.png";
+                    bgClick++;
+
+                } else if(bgClick==4){
+
+                    document.getElementById("bgs").src="images/blueBG.png";
+                    bgClick++;
+
+                } else if(bgClick==5){
+
+                    document.getElementById("bgs").src="images/purpleBG.png";
+                    bgClick++;
+
+                } else if(bgClick==6){
+
+                    document.getElementById("bgs").src="images/pinkBG.png";
+                    bgClick++;
+
+                } else if(bgClick==7){
+
+                    document.getElementById("bgs").src="images/rainbowBG.png";
+                    bgClick++;
+
+                } else if(bgClick==8){
+
+                    document.getElementById("bgs").src="images/stripes.png";
+                    bgClick++;
+
+                } else if(bgClick==9){
+
+                    document.getElementById("bgs").src="images/dots.jpg";
+                    bgClick++;
+
+                } else if(bgClick==10){
+
+                    document.getElementById("bgs").src="images/noBG.png";
+                    bgClick = 0;
+
+                }
+                
+            }
+            
+            
+            
+            
+            
+            /* ********** LEFT BUTTONS ******** */
+            
+            
+            
+            var leftColour = 0;
+            
+            function leftColourChange(){
+
+                if(leftColour==0){
+                    
+                    if(colourClick==0){
+                            
+                        document.getElementById("furColour").src="images/nakedbody.png";
+                        colourClick = 12;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/nakedtailup.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/nakedbobbed.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/nakedtaildown.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/nakednormal.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/nakedright.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/nakedleft.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/nakedcurled.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/nakedcurledright.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/nakedcurledleft.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/nakedfolded.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/nakedfoldedright.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/nakedfoldedleft.png"
+                            
+                        }
+                    
+                    } else if(colourClick==1){
+                            
+                        document.getElementById("furColour").src="images/mainBod.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/mainTail.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/bobTail.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/downTail.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/mainEars.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalRight.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalLeft.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/curled.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledRight.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledLeft.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/folded.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedRight.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedLeft.png"
+                            
+                        }
+
+                    } else if(colourClick==2){
+                            
+                        document.getElementById("furColour").src="images/GreyBod.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/tailUpGrey.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/bobbedGrey.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/downGrey.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/normalBothGrey.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalRightGrey.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalLeftGrey.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/curledBothGrey.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledRightGrey.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledLeftGrey.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/foldedBothGrey.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedRightGrey.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedLeftGrey.png"
+                            
+                        }
+
+                    } else if(colourClick==3){
+                            
+                        document.getElementById("furColour").src="images/BlackBod.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/tailUpBlack.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/bobbedBlack.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/downBlack.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/normalBothBlack.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalRightBlack.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalLeftBlack.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/curledBothBlack.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledRightBlack.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledLeftBlack.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/foldedBothBlack.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedRightBlack.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedLeftBlack.png"
+                            
+                        }
+
+                    } else if(colourClick==4){
+                            
+                        document.getElementById("furColour").src="images/TanBod.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/tailUpTan.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/bobbedTan.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/downTan.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/normalBothTan.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalRightTan.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalLeftTan.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/curledBothTan.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledRightTan.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledLeftTan.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/foldedBothTan.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedRightTan.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedLeftTan.png"
+                            
+                        }
+
+                    } else if(colourClick==5){
+                            
+                        document.getElementById("furColour").src="images/OrangeBod.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/tailUpOrange.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/bobbedOrange.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/downOrange.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/normalBothOrange.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalRightOrange.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalLeftOrange.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/curledBothOrange.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledRightOrange.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledLeftOrange.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/foldedBothOrange.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedRightOrange.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedLeftOrange.png"
+                            
+                        }
+
+                    } else if(colourClick==6){
+                            
+                        document.getElementById("furColour").src="images/brownBod.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/tailUpBrown.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/bobbedBrown.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/downBrown.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/normalBothBrown.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalRightBrown.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalLeftBrown.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/curledBothBrown.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledRightBrown.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledLeftBrown.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/foldedBothBrown.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedRightBrown.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedLeftBrown.png"
+                            
+                        }
+                        
+                    } else if(colourClick==7){
+                            
+                        document.getElementById("furColour").src="images/fluffymain.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/fluffyup.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/fluffybobbed.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/fluffydown.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffynormalmain.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffyrightwhite.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyleftwhite.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffycurled.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledr.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledl.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffyfolded.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedr.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedl.png"
+                            
+                        }
+                        
+                    } else if(colourClick==8){
+                            
+                        document.getElementById("furColour").src="images/fluffygrey.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/fluffyupgrey.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/fluffybobbedgrey.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/fluffydowngrey.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffynormalgrey.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffyrightgrey.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyleftgrey.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffycurledgrey.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrgrey.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlgrey.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedgrey.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrgrey.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlgrey.png"
+                            
+                        }
+                        
+                    } else if(colourClick==9){
+                            
+                        document.getElementById("furColour").src="images/fluffyblack.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/fluffyupblack.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/fluffybobbedblack.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/fluffydownblack.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffynormalblack.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffyrightblack.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyleftblack.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffycurledblack.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrblack.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlblack.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedblack.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrblack.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlblack.png"
+                            
+                        }
+                        
+                    } else if(colourClick==10){
+                            
+                        document.getElementById("furColour").src="images/fluffytan.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/fluffyuptan.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/fluffybobbedtan.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/fluffydowntan.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffynormaltan.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffyrighttan.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffylefttan.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffycurledtan.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrtan.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledltan.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedtan.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrtan.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedltan.png"
+                            
+                        }
+                        
+                    } else if(colourClick==11){
+                            
+                        document.getElementById("furColour").src="images/fluffyorange.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/fluffyuporange.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/fluffybobbedorange.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/fluffydownorange.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffynormalorange.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffyrightorange.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyleftorange.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffycurledorange.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrorange.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlorange.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedorange.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrorange.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlorange.png"
+                            
+                        }
+                        
+                    } else if(colourClick==12){
+                            
+                        document.getElementById("furColour").src="images/fluffybrown.png";
+                        colourClick--;
+                        
+                        if(tailClick==0){
+                            
+                            document.getElementById("tailShapes").src="images/fluffyupbrown.png"
+                            
+                        } else if(tailClick==1){
+                            
+                            document.getElementById("tailShapes").src="images/fluffybobbedbrown.png"
+                            
+                        } else if(tailClick==2){
+                            
+                            document.getElementById("tailShapes").src="images/fluffydownbrown.png"
+                            
+                        }
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffynormalbrown.png"
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffyrightbrown.png"
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyleftbrown.png"
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffycurledbrown.png"
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrbrown.png"
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlbrown.png"
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedbrown.png"
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrbrown.png"
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlbrown.png"
+                            
+                        }
+                        
+                    }
+                    
+                }
+
+            }
+            
+            
+            
+            
+            /* ***** EAR CHANGES ***** */
+            
+            
+            
+            var leftEar = 0;
+            
+            function leftEarChange(){
+                
+                if(leftEar==0){
+                    
+                    if(colourClick==0){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/foldedLeft.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/mainEars.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalRight.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/normalLeft.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curled.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledRight.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/curledLeft.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/folded.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedRight.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==1){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/foldedLeftGrey.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalBothGrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalRightGrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/normalLeftGrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledBothGrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledRightGrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/curledLeftGrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedBothGrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedRightGrey.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==2){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/foldedLeftBlack.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalBothBlack.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalRightBlack.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/normalLeftBlack.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledBothBlack.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledRightBlack.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/curledLeftBlack.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedBothBlack.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedRightBlack.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==3){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/foldedLeftTan.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalBothTan.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalRightTan.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/normalLeftTan.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledBothTan.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledRightTan.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/curledLeftTan.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedBothTan.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedRightTan.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==4){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/foldedLeftOrange.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalBothOrange.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalRightOrange.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/normalLeftOrange.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledBothOrange.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledRightOrange.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/curledLeftOrange.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedBothOrange.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedRightOrange.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==5){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/foldedLeftBrown.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/normalBothBrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/normalRightBrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/normalLeftBrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/curledBothBrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/curledRightBrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/curledLeftBrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/foldedBothBrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/foldedRightBrown.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==6){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedl.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffynormalmain.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyrightwhite.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffyleftwhite.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurled.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledr.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffycurledl.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfolded.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedr.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==7){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlgrey.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffynormalgrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyrightgrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffyleftgrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledgrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrgrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlgrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedgrey.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrgrey.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==8){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlblack.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffynormalblack.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyrightblack.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffyleftblack.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledblack.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrblack.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlblack.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedblack.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrblack.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==9){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedltan.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffynormaltan.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyrighttan.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffylefttan.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledtan.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrtan.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffycurledltan.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedtan.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrtan.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==10){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlorange.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffynormalorange.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyrightorange.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffyleftorange.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledorange.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrorange.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlorange.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedorange.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrorange.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==11){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedlbrown.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/fluffynormalbrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/fluffyrightbrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/fluffyleftbrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/fluffycurledbrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/fluffycurledrbrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/fluffycurledlbrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedbrown.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/fluffyfoldedrbrown.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } else if(colourClick==12){
+                        
+                        if(earClick==0){
+                            
+                            document.getElementById("ears").src="images/nakedfoldedleft.png";
+                            earClick = 8;
+                            
+                        } else if(earClick==1){
+                            
+                            document.getElementById("ears").src="images/nakednormal.png";
+                            earClick--;
+                            
+                        } else if(earClick==2){
+                            
+                            document.getElementById("ears").src="images/nakedright.png";
+                            earClick--;
+                            
+                        } else if(earClick==3){
+                            
+                            document.getElementById("ears").src="images/nakedleft.png";
+                            earClick--;
+                            
+                        } else if(earClick==4){
+                            
+                            document.getElementById("ears").src="images/nakedcurled.png";
+                            earClick--;
+                            
+                        } else if(earClick==5){
+                            
+                            document.getElementById("ears").src="images/nakedcurledright.png";
+                            earClick--;
+                            
+                        } else if(earClick==6){
+                            
+                            document.getElementById("ears").src="images/nakedcurledleft.png";
+                            earClick--;
+                            
+                        } else if(earClick==7){
+                            
+                            document.getElementById("ears").src="images/nakedfolded.png";
+                            earClick--;
+                            
+                        } else if(earClick==8){
+                            
+                            document.getElementById("ears").src="images/nakedfoldedright.png";
+                            earClick--;
+                            
+                        }
+                        
+                    } 
+                    
+                }
+                
+            }  
+            
+            
+            
+            
+            
+            /* ***** EYE CHANGES ***** */
+            
+            
+            
+            var leftEye = 0;
+            
+                function leftEyeChange(){
+                    
+                    if(leftEye==0){
+                        
+                        if(eyeClick==0){
+                            
+                            document.getElementById("eyes").src="images/happyEyes.png";
+                            eyeClick = 12;
+                            
+                        } else if(eyeClick==1){
+                            
+                            document.getElementById("eyes").src="images/normalBlue.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==2){
+                            
+                            document.getElementById("eyes").src="images/normalGreen.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==3){
+                            
+                            document.getElementById("eyes").src="images/normalYellow.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==4){
+                            
+                            document.getElementById("eyes").src="images/normalBrown.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==5){
+                            
+                            document.getElementById("eyes").src="images/excitedBlue.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==6){
+                            
+                            document.getElementById("eyes").src="images/excitedGreen.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==7){
+                            
+                            document.getElementById("eyes").src="images/excitedYellow.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==8){
+                            
+                            document.getElementById("eyes").src="images/excitedBrown.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==9){
+                            
+                            document.getElementById("eyes").src="images/suspiciousBlue.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==10){
+                            
+                            document.getElementById("eyes").src="images/suspiciousGreen.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==11){
+                            
+                            document.getElementById("eyes").src="images/suspiciousYellow.png";
+                            eyeClick--;
+                            
+                        } else if(eyeClick==12){
+                            
+                            document.getElementById("eyes").src="images/suspiciousBrown.png";
+                            eyeClick--;
+                            
+                        } 
+
+                    }
+
+                }
+            
+            
+            
+            
+            
+            /* ***** LEFT TAIL CHANGES ***** */
+            
+            
+            
+            var leftTail = 0;
+
+            function leftTailChange(){
+
+                if(leftTail==0){
+
+                    if(colourClick==0){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/downTail.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/mainTail.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/bobTail.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==1){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/downGrey.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/tailUpGrey.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/bobbedGrey.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==2){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/downBlack.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/tailUpBlack.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/bobbedBlack.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==3){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/downTan.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/tailUpTan.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/bobbedTan.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==4){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/downOrange.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/tailUpOrange.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/bobbedOrange.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==5){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/downBrown.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/tailUpBrown.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/bobbedBrown.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==6){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffydown.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyup.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffybobbed.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==7){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffydowngrey.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpgrey.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffybobbedgrey.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==8){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffydownblack.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpblack.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffybobbedblack.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==9){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffydowntan.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyUptan.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffybobbedtan.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==10){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffydownorange.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyUporange.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffybobbedorange.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==11){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/fluffydownBrown.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/fluffyUpBrown.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/fluffybobbedBrown.png";
+                            tailClick--;
+
+                        } 
+
+                    } else if(colourClick==12){
+
+                        if(tailClick==0){
+
+                            document.getElementById("tailShapes").src="images/nakedtaildown.png";
+                            tailClick = 2;
+
+                        } else if(tailClick==1){
+
+                            document.getElementById("tailShapes").src="images/nakedtailup.png";
+                            tailClick--;
+
+                        } else if(tailClick==2){
+
+                            document.getElementById("tailShapes").src="images/nakedbobbed.png";
+                            tailClick--;
+
+                        } 
+
+                    }
+
+                }
+
+            }
+            
+            
+            
+            var leftItem = 0;
+            
+            function leftItemChange(){
+                
+                if(itemClick==0){
+                    
+                    document.getElementById("item").src="images/bandanapink.png";
+                    itemClick = 12; 
+                    
+                } else if(itemClick==1){
+                    
+                    document.getElementById("item").src="images/noBG.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==2){
+                    
+                    document.getElementById("item").src="images/collarred.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==3){
+                    
+                    document.getElementById("item").src="images/collarorange.png";
+                    itemClick--; 
+                
+                } else if(itemClick==4){
+                    
+                    document.getElementById("item").src="images/collaryellow.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==5){
+                    
+                    document.getElementById("item").src="images/collargreen.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==6){
+                    
+                    document.getElementById("item").src="images/collarpurple.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==7){
+                    
+                    document.getElementById("item").src="images/collarpink.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==8){
+                    
+                    document.getElementById("item").src="images/bandanared.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==9){
+                    
+                    document.getElementById("item").src="images/bandanaorange.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==10){
+                    
+                    document.getElementById("item").src="images/bandanayellow.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==11){
+                    
+                    document.getElementById("item").src="images/bandanagreen.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==12){
+                    
+                    document.getElementById("item").src="images/bandanablue.png";
+                    itemClick--; 
+                    
+                } else if(itemClick==13){
+                    
+                    document.getElementById("item").src="images/bandanapurple.png";
+                    itemClick--;
+                }
+            }
+            
+            
+            
+            
+            /* ***** LEFT BG CHANGES ***** */
+            
+            
+            
+            var leftBG = 0;
+
+            function leftBGchange(){
+
+                if(leftBG==0){
+
+                    if(bgClick==0){
+
+                        document.getElementById("bgs").src="images/dots.jpg";
+                        bgClick = 10;
+
+                    } else if(bgClick==1){
+
+                        document.getElementById("bgs").src="images/noBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==2){
+
+                        document.getElementById("bgs").src="images/redBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==3){
+
+                        document.getElementById("bgs").src="images/orangeBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==4){
+
+                        document.getElementById("bgs").src="images/yellowBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==5){
+
+                        document.getElementById("bgs").src="images/greenBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==6){
+
+                        document.getElementById("bgs").src="images/blueBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==7){
+
+                        document.getElementById("bgs").src="images/purpleBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==8){
+
+                        document.getElementById("bgs").src="images/pinkBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==9){
+
+                        document.getElementById("bgs").src="images/rainbowBG.png";
+                        bgClick--;
+
+                    } else if(bgClick==10){
+
+                        document.getElementById("bgs").src="images/stripes.png";
+                        bgClick--;
+
+                    } 
+
+                }
+
+            }
+                    
+            
+                
+        
+        
+        
+        
+        
+        </script>
+
+
+    </body>
+</html>

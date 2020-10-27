@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poiret One, cursive;
+    margin: ;
+    
+}
+
+.header {
+    font-size: 22px;
+    padding: 5% 0 1% 10%;
+    text-align: left;
+}
+
+p {
+    margin: 0% 0% 0% -.75%;
+    padding: 0;
+}
+
+h1 {
+    text-align: left;
+    font-family: Kristi, cursive;
+    font-size: 100px;
+    color: darkturquoise;
+    padding: 0 0 5% 0;
+    margin: -30px;
+}
+
+h1:hover{
+    color: gold;
+    transition: 1s;
+}
+
+.row {
+    display: flex;
+    height: 100%;
+}
+
+.side {
+    flex:30%;
+    padding: 10px;
+    background: white;
+    text-align:center;
+    font-size: 25px;
+    line-height: 3.5;
+    padding: 2px;
+}
+
+#leftbuttons {
+    width:25%;
+    float:left;
+    padding:10px;
+}
+
+#buttonwords{
+    width:50%;
+    padding:0;
+    float:left;
+}
+
+#rightbuttons{
+    width:25%;
+    float:left;
+    padding:10px;
+}
+
+button {
+    height: 30px;
+    width: 40px;
+    font-size: 15px;
+    text-align: center;
+    background: #9beeef;
+    border: solid darkturquoise;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: gold;
+    border: solid goldenrod;
+    transition: 1s;
+}
+
+.main {
+    display: flex;
+    flex: 70%;
+    height: 800px;
+    padding: 2px;
+}
+
+#images {
+    margin: 0 auto;
+    left: 50%;
+    flex: 50%;
+}
+
+#furColour {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 1;
+}
+
+#ears {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 2;
+
+}
+
+#eyes {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 4;
+
+}
+
+
+#tailShapes {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 7;
+
+}
+
+#item {
+    position:absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 8;
+
+}
+
+#bgs {
+    position:absolute;
+    height: 856px;
+    width: 1000px;
+    left: 43%;
+    top: 100px;
+    z-index: 0;
+    border-radius: 5%;
+
+}
+
+.footer {
+    padding: 5% 0 1% 0;
+    text-align: center;
+    background: white;
+    color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
